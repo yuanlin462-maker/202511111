@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>互動測驗卷 — p5.js</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      /* 當測驗結束時，隱藏題目區域 */
+      #quizArea.quiz-hidden {
+        display: none;
+      }
+    </style>
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <main id="app">
+      <header>
+        <h1>互動測驗卷</h1>
+      </header>
+
+      <section id="controls">
+        <button id="startQuiz">開始測驗（抽 3 題）</button>
+      </section>
+
+      <section id="quizArea">
+        <!-- p5.js 會在此處顯示畫布與題目 DOM -->
+        <div id="canvasHolder"></div>
+        <div id="questionBox"></div>
+        <div id="navButtons"></div>
+      </section>
+
+      <section id="resultArea"></section>
+
+      <footer>
+      </footer>
+    </main>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
